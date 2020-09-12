@@ -2,7 +2,7 @@ import React from "react"
 
 import styles from './styles.css';
 
-function TodoItem() {
+function TodoItem(props) {
 
     const styles = {
         backgroundColor: "#8995F9",
@@ -14,8 +14,8 @@ function TodoItem() {
 
     return (
         <div className="todo-item">
-            <input type="checkbox" id="item1" name="item1"></input>
-            <p>Placeholder text</p>
+            <input type="checkbox" checked={props.completed} id="item1" name="item1"></input>
+            <p>{props.text}</p>
             <br/>
         </div>
     )

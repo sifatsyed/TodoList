@@ -34,6 +34,14 @@ body {
     color: #333333;
 }
 
+.strike {
+    text-decoration:line-through;
+}
+
 input[type=checkbox] {
     margin-right: 10px;
+}
+
+input[type=checkbox]:checked + p {
+    text-decoration: line-through;
 }
