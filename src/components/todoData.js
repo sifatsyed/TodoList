@@ -5,22 +5,22 @@ const todoData = [
         completed: true
     },
     {
-        id: 1,
+        id: 2,
         text: "Study",
         completed: false
     },
     {
-        id: 1,
+        id: 3,
         text: "Food",
         completed: true
     },
     {
-        id: 1,
+        id: 4,
         text: "Play",
         completed: false
     },
     {
-        id: 1,
+        id: 5,
         text: "Spend time with friends",
         completed: true
     }
