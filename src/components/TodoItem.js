@@ -1,4 +1,4 @@
-import React from "react"
+import React, {Component} from "react"
 
 import styles from './styles.css';
 
@@ -14,7 +14,7 @@ function TodoItem(props) {
 
     return (
         <div className="todo-item">
-            <input type="checkbox" checked={props.completed} id="item1" name="item1"></input>
+            <input type="checkbox" onChange={() => console.log("I was changed")} checked={props.completed} id="item1" name="item1"></input>
             <p>{props.text}</p>
             <br/>
         </div>

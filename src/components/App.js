@@ -1,20 +1,26 @@
-import React from 'react';
-import TodoItem from './TodoItem';
-import styles from './styles.css';
-import todoData from './todoData';
+import React from "react";
+import TodoItem from "./TodoItem";
+import todoData from "./todoData";
 
-function App() {
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      todos: todoData
+    }
+  }
+  render() {
+    const todoComponents = this.state.todos.map((todo) => (
+      <TodoItem id={todo.id} text={todo.text} completed={todo.completed} />
+    ));
 
-  const todoComponents = todoData.map(todo => <TodoItem id={todo.id} 
-    text={todo.text} 
-    completed={todo.completed}/> )
-
-  return(
-    <div className="todo-list">
-      <h1>This is a TODO list</h1>
+    return (
+      <div className="todo-list">
+        <h1>This is a TODO list</h1>
         {todoComponents}
-    </div>
-  )
+      </div>
+    );
+  }
 }
 
-export default App
+export default App;

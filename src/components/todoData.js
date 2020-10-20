@@ -22,7 +22,7 @@ const todoData = [
     {
         id: 1,
         text: "Spend time with friends",
-        completed: false
+        completed: true
     }
     
 ]
