@@ -41,7 +41,3 @@ body {
 input[type=checkbox] {
     margin-right: 10px;
 }
-
-input[type=checkbox]:checked + p {
-    text-decoration: line-through;
-}

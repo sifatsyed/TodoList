@@ -2,28 +2,26 @@ import React, { Component } from "react";
 
 import styles from "./styles.css";
 
-function TodoItem(props) {
-  const styles = {
-    backgroundColor: "#8995F9",
-    fontSize: 20,
-    border: "solid black 1px",
-    padding: 10,
-    width: "200px",
-  };
+class TodoItem extends Component {
+  render() {
 
-  return (
-    <div className="todo-item">
-      <input
-        type="checkbox"
-        checked={props.completed}
-        onChange={() => props.handleChange(props.id)}
-        id="item1"
-        name="item1"
-      />
-      <p>{props.text}</p>
-      <br />
-    </div>
-  );
+    const taskDone = {
+        color: "#cdcdcd",
+        textDecoration: "line-through"
+    }
+
+    return (
+      <div className="todo-item">
+        <input
+          type="checkbox"
+          checked={this.props.completed}
+          onChange={() => this.props.handleChange(this.props.id)}
+        />
+        <p style={this.props.completed ? taskDone : null}>{this.props.text}</p>
+        <br />
+      </div>
+    );
+  }
 }
 
 export default TodoItem;
